@@ -10,5 +10,5 @@ window.addEventListener('load', function (){
 
     loadingScreen.style.display = 'none';
     loadingScreen.style.transition = 'all ease-in-out 1s';
-    content.style.display = 'block';
+    content.style.display = 'grid';
 })
