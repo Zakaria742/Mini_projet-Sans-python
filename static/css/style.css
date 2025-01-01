@@ -24,7 +24,7 @@ body {
   width: 100%;
   background: repeating-linear-gradient(45deg, var(--main-color),var(--main-color) 3%, var(--sub-color) 3%, var(--sub-color) 5%);
   background-size: 150px 150px;
-  animation: move-it 4s linear infinite;
+  animation: move-it 4s linear alternate infinite;
 }
 a {
   color: black;
@@ -40,7 +40,7 @@ p {
   gap: 1em;
   margin: 1rem;
 }
-#main-title {
+.main-title {
   color: var(--main-color);
   text-align: center;
   font-size: 10vw;
