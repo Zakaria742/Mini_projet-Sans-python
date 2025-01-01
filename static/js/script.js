@@ -9,5 +9,6 @@ window.addEventListener('load', function (){
     const content = document.getElementById('cont');
 
     loadingScreen.style.display = 'none';
+    loadingScreen.style.transition = 'all ease-in-out 1s';
     content.style.display = 'block';
 })
