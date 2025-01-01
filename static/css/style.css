@@ -209,7 +209,7 @@ footer {
     background-position: 100px 0;
   }
 }
-
+/*Mobile responsive*/
 @media (max-width: 636px) {
   #nav-bar,
   #nav-bar > * {
@@ -247,6 +247,9 @@ footer {
   #nav-title::before {
     top: -20px;
     left: -20px;
+  }
+  .main-title{
+    -webkit-text-stroke: 3px black;
   }
 }
 
