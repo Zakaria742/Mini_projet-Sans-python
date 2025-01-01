@@ -2,8 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
 
 :root {
-  --Htransform: 0;
-  --Vtranform: 0;
   --sub-color: #ff7083;
   --main-color: #caff70;
 }
@@ -50,11 +48,6 @@ p {
   margin: 0;
   font-size: 8vw;
 }
-#sub-title {
-  text-align: center;
-  color: var(--sub-color);
-  display: none;
-}
 #nav-bar {
   display: flex;
   justify-content: space-between;
@@ -73,12 +66,11 @@ p {
   left: 10px;
   top: 10px;
   background: repeating-linear-gradient(
-    0deg,
-    var(--main-color),
-    var(--sub-color)
+    45deg,
+    var(--main-color)2% , var(--main-color) 6%,
+    var(--sub-color) 2%, var(--sub-color) 10%
   );
   position: absolute;
-  border: solid 2px;
   border-radius: 100%;
 }
 #nav-bar > ul {
@@ -232,14 +224,14 @@ footer {
     transition: all 0.5s ease-in-out;
   }
   #nav-bar.show #hamburger{
-    left: 22em;
+    left: 100%;
     transition: all ease-in-out 0.5s;
   }
   #hamburger {
     position: relative;
-    left: 17em;
+    left: 15em;
     display: block;
-    width: 1.8rem;
+    width: 1.5rem;
   }
   #cont {
     grid-template-columns: 1fr;
