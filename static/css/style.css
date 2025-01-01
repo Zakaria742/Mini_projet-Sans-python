@@ -40,7 +40,8 @@ p {
   color: var(--main-color);
   text-align: center;
   font-size: 12vw;
-  margin: 5rem;
+  margin: 5rem 0;
+  width: 100%;
   font-weight: bolder;
   -webkit-text-stroke: 4px black;
 }
@@ -224,14 +225,14 @@ footer {
     transition: all 0.5s ease-in-out;
   }
   #nav-bar.show #hamburger{
-    left: 100%;
+    left: 95%;
     transition: all ease-in-out 0.5s;
   }
   #hamburger {
     position: relative;
     left: 15em;
     display: block;
-    width: 1.5rem;
+    width: 1.8rem;
   }
   #cont {
     grid-template-columns: 1fr;
