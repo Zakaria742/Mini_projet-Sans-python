@@ -1,0 +1,251 @@
+@import url("https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&family=Asap:ital,wght@0,100..900;1,100..900&family=Madimi+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chewy&display=swap");
+
+:root {
+  --Htransform: 0;
+  --Vtranform: 0;
+  --sub-color: #ff7083;
+  --main-color: #caff70;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Chewy", "Arsenal", "VT323";
+  font-weight: 200;
+  list-style: none;
+  text-decoration: none;
+}
+
+body {
+  background-color: #ffffff;
+  height: 100%;
+  width: 100%;
+  background: repeating-linear-gradient(45deg, var(--main-color),var(--main-color) 3%, var(--sub-color) 3%, var(--sub-color) 5%);
+  background-size: 150px 150px;
+  animation: move-it 4s linear infinite;
+}
+a {
+  color: black;
+}
+p {
+  font-family: "VT323";
+}
+#cont {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin: 1rem;
+}
+#main-title {
+  color: var(--main-color);
+  text-align: center;
+  font-size: 10vw;
+  margin: 5rem;
+  font-weight: bolder;
+  -webkit-text-stroke: 2px black;
+}
+#sub-title {
+  text-align: center;
+  color: var(--sub-color);
+  display: none;
+}
+#nav-bar {
+  display: flex;
+  justify-content: space-between;
+  padding: 2em;
+  position: sticky;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+  z-index: 99;
+}
+#nav-title::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  left: 10px;
+  top: 10px;
+  background: repeating-linear-gradient(
+    0deg,
+    var(--main-color),
+    var(--sub-color)
+  );
+  position: absolute;
+  border: solid 2px;
+  border-radius: 100%;
+}
+#nav-bar > ul {
+  display: flex;
+  gap: 3em;
+  cursor: pointer;
+  transition: all 0.5s ease-in-outs;
+}
+
+#hamburger {
+  display: none;
+  width: 5%;
+  height: auto;
+  cursor: pointer;
+}
+img {
+  width: 65%;
+  height: auto;
+  transition: all ease-in-out 1s;
+}
+button {
+  padding: 0.5em 3em;
+  margin-top: 2em;
+  color: var(--sub-color);
+  background-color: white;
+  border: dotted 6px;
+  border-radius: 30%;
+  font-weight: bolder;
+  cursor: pointer;
+  transition: all ease-in-out 0.5s;
+}
+button:hover {
+  background-color: var(--main-color);
+  transition: all ease-in-out 0.3s;
+}
+.card {
+  text-align: center;
+  color: var(--main-color);
+  width: 100%;
+  height: 100%;
+  border: dashed 1px;
+  padding: 2rem;
+  margin: 1em 0;
+  background-color: white;
+  line-height: 1.5rem;
+  color: black;
+}
+
+.card img:hover {
+  animation: hovering step-end 0.5s forwards alternate;
+}
+
+#nav-bar.show {
+  position: absolute;
+  left: 0rem;
+  background-color: rgb(255, 255, 255);
+  transition: all 0.5s ease-in-out;
+}
+
+.card > h1 {
+  margin-bottom: 1em;
+  color: var(--sub-color);
+  width: 100%;
+  text-align: center;
+}
+
+body.mobile #nav-bar {
+  flex-direction: column;
+}
+
+body.mobile #cont {
+  grid-template-columns: 1fr;
+}
+
+footer {
+  background-color: burlywood;
+  display: flex;
+  gap: 3rem;
+  padding: 1rem;
+}
+#socials {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+#address {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#about {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: justify;
+  border: solid 1px;
+  margin: 5rem 23rem;
+  padding: 1rem;
+  background-color: white;
+}
+
+@keyframes hovering {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  25% {
+    transform: translate(3px, 3px);
+  }
+  50% {
+    transform: translate(6px, 6px);
+  }
+  75% {
+    transform: translate(-3px, -3px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@keyframes move-it{
+  0%{
+    background-position: initial;
+  }
+  100%{
+    background-position: 100px 0;
+  }
+}
+
+@media (max-width: 636px) {
+  #nav-bar,
+  #nav-bar > * {
+    flex-direction: column;
+    gap: 2em;
+    width: 100%;
+    position: relative;
+  }
+  #nav-bar {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: -16em;
+    background-color: rgba(255, 255, 255, 0);
+    transition: all 0.5s ease-in-out;
+  }
+  #nav-bar.show {
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transition: all 0.5s ease-in-out;
+  }
+  #hamburger {
+    position: relative;
+    left: 17em;
+    display: block;
+    width: 1.8rem;
+  }
+  #cont {
+    grid-template-columns: 1fr;
+  }
+  #nav-title::before {
+    top: -20px;
+    left: -20px;
+  }
+}
+
+@media (max-width: 1203px) {
+  #about {
+    margin: 5rem 2rem;
+  }
+}
