@@ -277,7 +277,12 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  transition: all ease-in-out 1s;
+  opacity: 1; /* Fully visible initially */
+  transition: opacity 3s ease, visibility 3s ease;
+}
+#loading-screen.hidden {
+  opacity: 0; /* Fully transparent */
+  visibility: hidden; /* Prevent interaction after fade-out */
 }
 
 /* Simple spinner animation */

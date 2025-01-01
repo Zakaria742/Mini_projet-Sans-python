@@ -7,8 +7,9 @@ function show_tab(){
 window.addEventListener('load', function (){
     const loadingScreen = document.getElementById('loading-screen');
     const content = document.getElementById('cont');
-
-    loadingScreen.style.display = 'none';
-    loadingScreen.style.transition = 'all ease-in-out 1s';
-    content.style.display = 'grid';
+    loadingScreen.classList.add('hidden');
+    setTimeout(() => {
+        loadingScreen.style.display = 'none'; // Ensure it's completely removed
+      }, 3000);
+      content.style.display = 'grid';
 })
