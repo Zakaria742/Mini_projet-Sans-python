@@ -24,7 +24,7 @@ body {
   width: 100%;
   background: repeating-linear-gradient(45deg, var(--main-color),var(--main-color) 3%, var(--sub-color) 3%, var(--sub-color) 5%);
   background-size: 150px 150px;
-  animation: move-it 4s linear alternate infinite;
+  animation: move-it 10s linear alternate infinite;
 }
 a {
   color: black;
@@ -34,19 +34,21 @@ p {
 }
 #cont {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-content: center;
-  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1em;
   margin: 1rem;
 }
 .main-title {
   color: var(--main-color);
   text-align: center;
-  font-size: 10vw;
+  font-size: 12vw;
   margin: 5rem;
   font-weight: bolder;
-  -webkit-text-stroke: 6px black;
+  -webkit-text-stroke: 4px black;
+}
+#about .main-title{
+  margin: 0;
+  font-size: 8vw;
 }
 #sub-title {
   text-align: center;
@@ -228,6 +230,10 @@ footer {
     left: 0;
     background-color: rgb(255, 255, 255);
     transition: all 0.5s ease-in-out;
+  }
+  #nav-bar.show #hamburger{
+    left: 22em;
+    transition: all ease-in-out 0.5s;
   }
   #hamburger {
     position: relative;
